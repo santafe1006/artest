@@ -12,10 +12,14 @@
 <body style="margin:0px; overflow:hidden;"> 
   <scirpt>
     AFRAME.registerComponent('hello-world', {
-  init: function () {
-<!--     alert('Hello, World!'); -->
-    window.location.href('https:///www.yahoo.co.jp');
-  }
+    init: function () {
+    console.log("called in init");
+    <!--     alert('Hello, World!'); -->
+    <!--     window.location.href('https:///www.yahoo.co.jp'); -->
+    },
+    play: function() {
+    console.log("called in play");
+    }
 });
     </script>
   
@@ -33,7 +37,7 @@
  
     <a-marker preset="kanji">
       <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） -->
-      <a-entity hello-world></a-entity>
+      <a-box color="red" position="0 0.5 0" wireframe="true"></a-box>
     </a-marker>
     
      <a-nft
@@ -43,6 +47,7 @@
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
+      hello-world
       >
       <a-cylinder position="0 0.5 0" color="cyan" segments-radial="6"></a-cylinder>
      </a-nft>
