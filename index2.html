@@ -15,11 +15,11 @@
     AFRAME.registerComponent('hello-world', {
     init: function () {
     console.log("called in init");
-    alert("called in init");
+    // alert("called in init");
 //     window.location.assign('https:///www.yahoo.co.jp');
     },
     play: function() {
-    alert("called in play");
+    // alert("called in play");
     console.log("called in play");
     }
 });
@@ -43,7 +43,7 @@
  
     <a-marker preset="kanji" hello-world>
       <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） -->
-       <a-box color="red" position="0 0.5 -2" wireframe="true"></a-box>
+       <a-box color="blue" position="0 0.5 -2" wireframe="true"></a-box>
       
     </a-marker>
     
@@ -56,7 +56,7 @@
       smoothThreshold="5"
       hello-world
       >
-      <a-cylinder position="0 0.5 0" color="cyan" segments-radial="6"></a-cylinder>
+      <a-cylinder position="0 0.5 2" color="red" segments-radial="6"></a-cylinder>
      </a-nft>
     
     <!-- AR用のカメラを置く -->
