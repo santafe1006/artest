@@ -23,6 +23,7 @@
     </a-scene>
     <script>
       window.addEventListener('load', () => {
+        alert('hello');
         const el = document.querySelector('[gps-entity-place]');
         el.addEventListener('gps-entity-place-update-positon', (event) => {
           if(event.detail.distance < 100) {
