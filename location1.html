@@ -28,8 +28,10 @@
         el.addEventListener('gps-entity-place-update-positon', (event) => {
           if(event.detail.distance < 100) {
             el.setAttribute('material','color: yellow');
+            console.log('hello -> ' + event.detail.distance);
           } else {
             el.setAttribute('material','color: red');
+            console.log('bye -> ' + event.detail.distance);
           }
         });
       });
