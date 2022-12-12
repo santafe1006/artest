@@ -1,0 +1,26 @@
+<html>
+ <head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="tracking.js"></script>
+ </head>
+
+ <body>
+  <a-scene>
+   <!--Camera-->
+   <a-entity id="camera" camera></a-entity>
+   <!--Field-->
+   <a-sky color="#44AAFF"></a-sky>
+   <a-plane position="0 0 -5" rotation="-90 0 0" width="6" height="6" color="#BB9944" shadow></a-plane>
+   <!--Camera-tracking Text-->
+   <a-entity id="text" camera-tracking="circleR: 2; shiftX: 1; shiftY: 0.1"
+             text="font: mozillavr; value: Tracking test.; color: black" 
+             scale="3 3 1">
+   </a-entity>
+   <!--Camera-tracking Box-->
+   <a-entity id="box" camera-tracking="circleR: 3; shiftX: 0; shiftY: -0.5"
+             geometry="primitive: box"
+             scale="0.8 0.3 0.2" material="color: red" shadow>
+        </a-entity>
+  </a-scene>
+ </body>
+</html>
