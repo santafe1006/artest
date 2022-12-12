@@ -1,9 +1,9 @@
 AFRAME.registerComponent('camera-tracking', {
 
   schema: {
-    circleR: {type: 'float', default: '1'},
-    shiftX: {type: 'float', default: '0'},
-    shiftY: {type: 'float', default: '0'}
+    circleR: {type: 'float', default: 1},
+    shiftX: {type: 'float', default: 0},
+    shiftY: {type: 'float', default: 0}
   },
 
   tick: function () {
